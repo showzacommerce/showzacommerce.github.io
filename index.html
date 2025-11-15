@@ -6,136 +6,235 @@
     <title>André Sousa - Analista de E-commerce</title>
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
-        }
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 40px;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-        header p {
-            font-size: 1.3em;
-            opacity: 0.9;
-        }
-        .content {
-            padding: 40px;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-        .section h2 {
-            color: #667eea;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .project-card {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            border-left: 5px solid #667eea;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .project-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-        }
-        .project-card h3 {
-            color: #764ba2;
-            margin-bottom: 10px;
-        }
-        .project-card p {
-            margin: 8px 0;
-        }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .skill-tag {
-            background: #667eea;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            transition: 0.3s;
-        }
-        .skill-tag:hover {
-            background: #764ba2;
-            transform: scale(1.05);
-        }
-        .contact {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-        .contact a {
-            background: #667eea;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            transition: 0.3s;
-            display: inline-block;
-        }
-        .contact a:hover {
-            background: #764ba2;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
-        }
-        .experience {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            border-left: 4px solid #764ba2;
-        }
-        .experience h3 {
-            color: #667eea;
-            margin-bottom: 5px;
-        }
-        .experience .period {
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 10px;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-            header p {
-                font-size: 1em;
-            }
-            .content {
-                padding: 20px;
-            }
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #e5e5e5;
+    background: #000000;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #0a0a0a;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(255, 0, 68, 0.3);
+    overflow: hidden;
+    border: 1px solid #ff0044;
+}
+
+header {
+    background: linear-gradient(135deg, #000000 0%, #1a0a0f 100%);
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+    border-bottom: 2px solid #ff0044;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 0, 68, 0.1) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(255, 0, 68, 0.8);
+    position: relative;
+    z-index: 1;
+}
+
+header p {
+    font-size: 1.3em;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    padding: 40px;
+    background: #0a0a0a;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    color: #ff0044;
+    border-bottom: 3px solid #ff0044;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 0, 68, 0.5);
+    font-size: 1.8em;
+}
+
+.project-card {
+    background: linear-gradient(135deg, #1a0a0f 0%, #0f0a0f 100%);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border-left: 5px solid #ff0044;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.project-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(255, 0, 68, 0.4);
+    border-left: 5px solid #ff3366;
+    background: linear-gradient(135deg, #1f0a14 0%, #140a0f 100%);
+}
+
+.project-card h3 {
+    color: #ff3366;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 0, 68, 0.3);
+}
+
+.project-card p {
+    margin: 8px 0;
+    color: #cccccc;
+}
+
+.project-card strong {
+    color: #ff0044;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, #ff0044 0%, #cc0036 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    transition: all 0.3s;
+    box-shadow: 0 0 15px rgba(255, 0, 68, 0.3);
+    border: 1px solid #ff0044;
+}
+
+.skill-tag:hover {
+    background: linear-gradient(135deg, #ff3366 0%, #ff0044 100%);
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 0, 68, 0.6);
+}
+
+.contact {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contact a {
+    background: linear-gradient(135deg, #ff0044 0%, #cc0036 100%);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+    border: 2px solid #ff0044;
+    box-shadow: 0 5px 20px rgba(255, 0, 68, 0.4);
+    font-weight: bold;
+}
+
+.contact a:hover {
+    background: linear-gradient(135deg, #ff3366 0%, #ff0044 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 0, 68, 0.7);
+    border-color: #ff3366;
+}
+
+.experience {
+    background: linear-gradient(135deg, #1a0a0f 0%, #0f0a0f 100%);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border-left: 4px solid #ff0044;
+    transition: all 0.3s;
+}
+
+.experience:hover {
+    border-left: 4px solid #ff3366;
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(255, 0, 68, 0.3);
+}
+
+.experience h3 {
+    color: #ff3366;
+    margin-bottom: 5px;
+}
+
+.experience .period {
+    color: #999;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.experience p {
+    color: #cccccc;
+}
+
+h3 {
+    color: #ff0044;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    .content {
+        padding: 20px;
+    }
+}
+
+/* Efeito de brilho no scroll */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff0044 0%, #cc0036 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff3366 0%, #ff0044 100%);
+}
     </style>
 </head>
 <body>
